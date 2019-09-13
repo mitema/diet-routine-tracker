@@ -64,3 +64,15 @@
 .meal-type-text {
   color: "#787878";
 }
+
+.details-add-button {
+  color: white;
+}
+
+.details-options-container {
+  color: black;
+}
+
+.dropdown-content li > span {
+  color: black !important;
+}

@@ -26,7 +26,7 @@ const FoodList = () => {
           foodCalories={item.nf_calories}
           icon={item.thumb}
           servingUnit={item.serving_unit}
-          servingsQty={item.servings_qty}
+          servingsQty={item.serving_qty}
           servingsSize={item.serving_size}
           mealType={item.meal_type}
           key={index}

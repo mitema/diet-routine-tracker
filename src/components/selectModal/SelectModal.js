@@ -5,33 +5,34 @@ import "./SelectModal.css";
 
 const SelectModal = () => {
   const [clickedItemId, setItemClicked] = useState(null);
+  const [itemClassNames, setItemClassNames] = useState(null);
   const foodContext = useContext(FoodContext);
   const itemType = { common: "common", branded: "branded" };
-  let count = 0;
   const { foods } = foodContext;
 
   const handleOnClick = e => {
     setItemClicked(e.target.id);
+    setItemClassNames(e.target.className);
   };
 
   useEffect(() => {
     if (clickedItemId) {
       // Split the string to get the foodId and type of food
-      const targetItems = clickedItemId.split("-");
+
+      const targetItems = clickedItemId;
+      const brandId = itemClassNames.split(" ")[0];
       const targetItemType =
-        Number(targetItems[1].toString()) === 0
-          ? itemType.common
-          : itemType.branded;
-      const targetItemId = Number(targetItems[0]);
+        Number(brandId.toString()) === 0 ? itemType.common : itemType.branded;
+      const targetItemId = targetItems;
+
       setItemClicked(null);
       foodContext.searchNutrients(targetItemId, targetItemType);
       foodContext.setFoodItemClicked();
     }
-    count++;
-    console.log(count);
-  }, [clickedItemId, foodContext, itemType, count]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clickedItemId, foodContext, itemType]);
 
-  const getFoodDetails = (obj, count) => {
+  const getFoodDetails = (obj, baseKey) => {
     let items = null;
     if (obj) {
       const food_items_length = Object.keys(obj).length;
@@ -44,42 +45,50 @@ const SelectModal = () => {
           }
           if (index <= 4) {
             return (
-              <>
-                <li
-                  id={`${index}-${brandId}`}
-                  className="collection-item avatar select-collection-item"
-                  onClick={handleOnClick}
-                  key={`index+2-${count}`}
+              <li
+                id={[item.food_name]}
+                className={`${brandId} collection-item avatar select-collection-item`}
+                onClick={handleOnClick}
+                key={item.food_name}
+              >
+                <a
+                  href="#details-modal"
+                  className={`${brandId} modal-trigger details-modal-trigger-link`}
+                  id={[item.food_name]}
                 >
-                  <a
-                    href="#details-modal"
-                    className="modal-trigger details-modal-trigger-link"
-                    id={`${index}-${brandId}`}
+                  <div
+                    id={[item.food_name]}
+                    className={`${brandId} select-item-content-container`}
                   >
-                    <div className="select-item-content-container">
-                      <i className="material-icons circle icon-circle select-food-icon">
-                        <img
-                          src={item.photo.thumb}
-                          alt="food-icon"
-                          className="select-food-img"
-                        />
-                      </i>
+                    <i
+                      id={[item.food_name]}
+                      className={`${brandId} material-icons circle icon-circle select-food-icon`}
+                    >
+                      <img
+                        src={item.photo.thumb}
+                        alt="food-icon"
+                        id={[item.food_name]}
+                        className={`${brandId} select-food-img`}
+                      />
+                    </i>
 
-                      <div>
-                        <span
-                          id={`${index}-${brandId}`}
-                          className="title select-food-title"
+                    <div>
+                      <span
+                        id={[item.food_name]}
+                        className={`${brandId} title select-food-title`}
+                      >
+                        {item.food_name}
+                        <div
+                          id={[item.food_name]}
+                          className={`${brandId} item-brand-name`}
                         >
-                          {item.food_name}
-                          <div id={`${index}-${brandId}`}>
-                            {item.brand_name}
-                          </div>
-                        </span>
-                      </div>
+                          {item.brand_name}
+                        </div>
+                      </span>
                     </div>
-                  </a>
-                </li>
-              </>
+                  </div>
+                </a>
+              </li>
             );
           }
         });
@@ -101,18 +110,18 @@ const SelectModal = () => {
         <div className="modal-content select-modal-content">
           <div className="row">
             <ul className="collection select-modal-collection">
-              <li key={`0-${count}`}>
+              <li key="0">
                 <div className="list-header-common">
                   <b>COMMON</b>
                 </div>
               </li>
-              {getFoodDetails(foods.common, count)}
-              <li key={`1-${count}`} className="select-list-item-title">
+              {getFoodDetails(foods.common, 0)}
+              <li key="1" className="select-list-item-title">
                 <div className="list-header-branded">
                   <b>BRANDED</b>
                 </div>
               </li>
-              {getFoodDetails(foods.branded, count)}
+              {getFoodDetails(foods.branded, 1)}
             </ul>
           </div>
         </div>

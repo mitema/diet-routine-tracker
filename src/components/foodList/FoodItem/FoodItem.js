@@ -1,5 +1,5 @@
 import React from "react";
-import "./FoodItem";
+import "./FoodItem.css";
 
 const FoodItem = props => {
   const {
@@ -8,9 +8,10 @@ const FoodItem = props => {
     foodCalories,
     icon,
     servingUnit,
-    servingsSize,
+    servingsQty,
     mealType
   } = props;
+
   return (
     <li className="collection-item avatar" style={inlineStyles.collectionStyle}>
       <a href="#!" className="modal-trigger" style={inlineStyles.linkStyle}>
@@ -26,7 +27,7 @@ const FoodItem = props => {
               <b>{foodName}</b>
             </div>
             <div className="diet-servings-size-text">
-              {servingsSize} {servingUnit} ({foodGrams} g)
+              {servingsQty} {servingUnit} ({foodGrams} g)
             </div>
           </div>
           <div className="diet-details-section">

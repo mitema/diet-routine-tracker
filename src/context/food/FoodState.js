@@ -44,28 +44,35 @@ const FoodState = props => {
 
   const searchNutrients = async (itemID, itemType) => {
     setLoading();
-    const foodItem = getFoodItem(itemID, itemType);
-    let foodName = foodItem[0].food_name;
-    if (foodItem.nix_brand_id) {
-      foodName = foodItem.nix_brand_id;
-    }
-    const serving_qty = foodItem[0].serving_qty;
-    const serving_unit = foodName[0].serving_unit;
-
-    const queryString = `${serving_qty} ${serving_unit} ${foodName}`;
+    let res = null;
+    let body = null;
     const headerConfig = getHeaderConfig();
+    const foodItem = getFoodItem(itemID, itemType);
+    if (!foodItem[0].nix_brand_id) {
+      let foodName = foodItem[0].food_name;
+      const serving_qty = foodItem[0].serving_qty;
+      const serving_unit = foodItem[0].serving_unit;
 
-    const body = {
-      query: queryString
-    };
-    const res = await axios.post(
-      "https://trackapi.nutritionix.com/v2/natural/nutrients",
-      body,
-      headerConfig
-    );
+      const queryString = `${serving_qty} ${serving_unit} ${foodName}`;
+      body = {
+        query: queryString
+      };
+      res = await axios.post(
+        "https://trackapi.nutritionix.com/v2/natural/nutrients",
+        body,
+        headerConfig
+      );
+    } else {
+      const brandId = foodItem[0].nix_item_id;
+      res = await axios.get(
+        `https://trackapi.nutritionix.com/v2/search/item?nix_item_id=${brandId}`,
+        headerConfig
+      );
+    }
+
     dispatch({
       type: SEARCH_NUTRIENTS,
-      payload: res.data
+      payload: res.data.foods
     });
   };
 
@@ -102,12 +109,14 @@ const FoodState = props => {
 
   const getFoodItem = (itemID, type) => {
     const foodArray = state.foods[type];
+
     const foodItem = foodArray.filter((item, index) => {
-      return index === itemID;
+      return itemID === item.food_name;
     });
 
     return foodItem;
   };
+
   const setFoodItemClicked = () => {
     dispatch({
       type: SET_FOOD_ITEM_CLICKED

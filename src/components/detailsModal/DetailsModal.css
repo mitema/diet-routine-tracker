@@ -9,6 +9,9 @@
   background-color: white !important;
   height: 70% !important;
 }
+.details-item-brand-name {
+  color: gray;
+}
 .collection-item .details-item {
   margin-left: 20px !important;
   padding-left: 0px !important;

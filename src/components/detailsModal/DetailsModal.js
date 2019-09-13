@@ -12,7 +12,7 @@ const DetailsModal = () => {
   const [brandName, setBrandName] = useState("");
   const [servingsQty, setServingsQty] = useState("");
   const { foodItemClicked, nutrientInfo, addFoodItem } = foodContext;
-  const [servingsSize, setServingsSize] = useState("0.0");
+  const [servingsSize, setServingsSize] = useState(1.0);
   const [mealType, setMealType] = useState("Breakfast");
 
   const handleInputOnChange = e => {
@@ -28,18 +28,20 @@ const DetailsModal = () => {
   useEffect(() => {
     if (foodItemClicked) {
       if (nutrientInfo) {
-        setIcon(nutrientInfo.foods[0].photo.thumb);
-        setFoodName(nutrientInfo.foods[0].food_name);
-        setBrandName(nutrientInfo.foods[0].brand_name);
-        setServingUnit(nutrientInfo.foods[0].serving_unit.split("(")[0]);
+        setServingsQty(nutrientInfo[0].serving_qty * Number(servingsSize));
+        setIcon(nutrientInfo[0].photo.thumb);
+        setFoodName(nutrientInfo[0].food_name);
+        setBrandName(nutrientInfo[0].brand_name);
+        setServingUnit(nutrientInfo[0].serving_unit.split("(")[0]);
         setFoodGrams(
-          Math.round(nutrientInfo.foods[0].serving_weight_grams) *
-            Number(servingsSize)
+          Math.round(
+            nutrientInfo[0].serving_weight_grams * Number(servingsSize)
+          )
         );
+
         setFoodCalories(
-          Math.round(nutrientInfo.foods[0].nf_calories) * Number(servingsSize)
+          Math.round(nutrientInfo[0].nf_calories * Number(servingsSize))
         );
-        setServingsQty(nutrientInfo.foods[0].serving_qty);
       }
     }
   }, [
@@ -48,6 +50,7 @@ const DetailsModal = () => {
     foodItemClicked,
     foodName,
     nutrientInfo,
+    servingsQty,
     servingsSize
   ]);
 
@@ -67,10 +70,10 @@ const DetailsModal = () => {
 
   const operationOnClick = type => {
     if (type === servingsOperationType.up) {
-      setServingsSize(Number(servingsSize) + 0.5);
+      setServingsSize(Number(servingsSize) + 1);
     } else if (type === servingsOperationType.down) {
       if (servingsSize > 0) {
-        setServingsSize(servingsSize - 0.5);
+        setServingsSize(Number(servingsSize) - 1);
       }
     }
   };
@@ -96,6 +99,7 @@ const DetailsModal = () => {
                       />
                     </i>
                     <h5 className="title details-food-title">{foodName}</h5>
+                    <div className="details-item-brand-name">{brandName}</div>
                   </div>
 
                   <a href="#!" className="modal-close">
@@ -176,7 +180,7 @@ const DetailsModal = () => {
               </div>
               <div
                 className="details-add-button-container"
-                onClick={handleAddFood}
+                onClick={() => handleAddFood()}
               >
                 <a
                   href="#!"

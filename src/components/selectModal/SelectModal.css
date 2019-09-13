@@ -43,6 +43,9 @@
   color: gray !important;
   margin-left: 1rem;
 }
+.item-brand-name {
+  color: gray;
+}
 .list-header-branded {
   margin-left: 1rem;
   color: gray !important;
