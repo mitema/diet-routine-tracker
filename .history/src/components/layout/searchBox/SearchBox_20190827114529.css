@@ -1,0 +1,36 @@
+.search-bar {
+  background-color: white;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content > * {
+  flex: 1 100%;
+}
+
+.search-container {
+  flex: 1;
+}
+
+.period-container {
+  flex: 100% 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.period-title {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.search-container {
+  order: 1;
+}
+.period-container {
+  order: 2;
+}

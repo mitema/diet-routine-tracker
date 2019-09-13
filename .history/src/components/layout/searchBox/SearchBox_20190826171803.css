@@ -1,0 +1,15 @@
+.search-bar {
+  display: flex;
+
+  flex-flow: row wrap;
+}
+
+.search-icon {
+  color: black;
+}
+.search-bar > * {
+  flex: 1 5px;
+}
+
+.navigator-container {
+}

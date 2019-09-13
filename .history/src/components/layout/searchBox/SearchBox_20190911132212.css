@@ -1,0 +1,14 @@
+.search-bar {
+  background-color: white;
+}
+
+.search-container {
+  flex: 1;
+  order: 1;
+}
+
+@media all and (min-width: 600px) {
+  .search-bar {
+    width: 60% !important;
+  }
+}

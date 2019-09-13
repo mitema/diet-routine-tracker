@@ -1,0 +1,8 @@
+.modal {
+  top: 0px !important;
+}
+
+.icon-circle {
+  border-radius: 4px !important;
+  border: 1px solid transparent;
+}

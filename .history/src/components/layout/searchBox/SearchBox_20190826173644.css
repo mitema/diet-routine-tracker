@@ -1,0 +1,21 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+}
+
+.search-icon {
+  color: black;
+}
+.search-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

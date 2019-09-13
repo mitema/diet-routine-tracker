@@ -1,0 +1,12 @@
+.diet-goal-container {
+  display: flex;
+}
+
+.diet-consumed-container {
+  margin-right: auto;
+  margin-left: 1rem;
+}
+
+.goal-container {
+  margin-right: 1rem;
+}

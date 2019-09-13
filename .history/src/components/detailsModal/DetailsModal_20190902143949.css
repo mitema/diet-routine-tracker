@@ -1,0 +1,34 @@
+.details-food-modal {
+  top: 25% !important;
+}
+
+.icon-and-text-container {
+  display: flex;
+}
+
+.icon-text-container > * {
+  flex: 0px 100%;
+}
+
+.operations-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.operations-icon > * {
+  flex: 1 100%;
+}
+
+.down-arrow {
+}
+.input-field input[type="text"]:focus + label {
+  color: #000 !important;
+}
+
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 0px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+}

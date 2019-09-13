@@ -1,0 +1,52 @@
+.period-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.period-top-container {
+  margin: auto;
+  margin-bottom: 1rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+.period-body-container {
+  width: 100%;
+}
+.period-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+}
+.period-container {
+  margin: auto;
+  width: 40%;
+  order: 2;
+}
+/*.arrow-icons {
+  color: white !important;
+
+  font-size: 1rem !important;
+}
+.arrow-back-icon {
+  margin-left: 1.5rem !important;
+}
+
+.arrow-forward-icon {
+  margin-right: 1.5rem !important;
+} */
+
+@media all and (min-width: 0px) {
+  .period-container {
+    width: 95%;
+  }
+  .arrow-icons {
+    color: #6200ee !important ;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .arrow-icons {
+    color: white !important;
+  }
+}

@@ -1,0 +1,9 @@
+.header-container {
+  width: 100%;
+  background-color: #6200ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: auto;
+}

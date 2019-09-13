@@ -1,0 +1,16 @@
+.profile-container {
+  background-color: #6200ee;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-picture {
+  flex: 1;
+}
+
+.round-button {
+  flex: 1;
+}

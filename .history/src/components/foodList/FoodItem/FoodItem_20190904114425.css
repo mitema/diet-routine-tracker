@@ -1,0 +1,19 @@
+.food-list-container {
+  display: flex;
+}
+
+.food-icon {
+  background-color: black;
+}
+
+.food-title {
+  background-color: white;
+}
+
+.food-details {
+  background-color: black;
+}
+
+.diet-item-container {
+  display: flex;
+}

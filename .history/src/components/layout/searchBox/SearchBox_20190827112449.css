@@ -1,0 +1,31 @@
+.search-bar {
+  background-color: white;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.header-content > * {
+  flex: 1 100%;
+}
+
+.search-container {
+  flex: 1;
+  width: 50%;
+}
+
+.period-container {
+  flex: 100% 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  order: 1;
+}
+.period-container {
+  order: 2;
+}

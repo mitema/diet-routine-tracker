@@ -1,0 +1,31 @@
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #6200ee;
+  width: 100%;
+}
+
+/* Medium screens */
+@media all and (min-width: 0px) {
+  /* We tell both sidebars to share a row */
+  .profile-container {
+    flex: 1;
+  }
+  .food-list-container {
+    flex: 100% 0px;
+  }
+  .search-container {
+    order: 2;
+  }
+  .profile-container {
+    order: 1;
+  }
+  .period-top-container {
+    order: 1;
+  }
+  .food-list-container {
+    order: 4;
+  }
+}

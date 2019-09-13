@@ -1,0 +1,6 @@
+.profile-picture-container * > {
+  flex: 1 100%;
+}
+.profile-text {
+  flex: 100% 0px;
+}

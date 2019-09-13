@@ -1,0 +1,137 @@
+.details-food-modal {
+  top: 20% !important;
+  width: 95% !important;
+  margin-top: 10px !important;
+  background-color: transparent !important;
+}
+.collection.modal-content {
+  padding: 0px !important;
+  background-color: white !important;
+  height: 70% !important;
+}
+.collection-item .details-item {
+  margin-left: 20px !important;
+  padding-left: 0px !important;
+}
+
+.collection-item-content {
+  height: 100% !important;
+}
+
+.servings-container {
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 0rem !important;
+  height: 80% !important;
+}
+.icon-and-text-container {
+  display: flex !important;
+}
+.icon-and-text-container-content {
+  display: flex !important;
+  width: 100% !important;
+}
+.icon-and-text-container-content-box {
+  margin-right: auto !important;
+}
+.details-food-icon {
+  border-radius: 5px !important;
+}
+.details-img-icon {
+  border-radius: 5px !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+.details-food-title {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.details-modal-close-icon {
+  border-radius: 5px !important;
+  color: #6200ee;
+}
+.details-input-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 2rem !important;
+  margin-right: auto !important;
+  width: 40% !important;
+  border-bottom: 5px solid #6200ee !important;
+  background-color: #fafafa !important;
+  border-radius: 5px !important;
+}
+.details-input-filed {
+  border-bottom: 0px !important;
+  margin-left: 0px !important;
+  left: 0px !important;
+  right: 0px !important;
+  width: 100% !important;
+  margin-bottom: 0px !important;
+}
+.servings-size-input-box {
+  border-bottom: 0px !important;
+  height: 2rem !important;
+}
+.servings-unit-label {
+  color: #6200ee !important;
+}
+.icon-text-container > * {
+  flex: 0px 100%;
+}
+.details-input-chevron {
+  color: black !important;
+  font-size: 15px !important;
+}
+
+.details-text-container {
+  display: flex !important;
+  margin-right: 1rem !important;
+}
+.operations-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.operations-icon > * {
+  flex: 1 100%;
+}
+
+.down-arrow {
+}
+.input-field input[type="text"]:focus + label {
+  color: #000 !important;
+}
+
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 0px !important;
+  box-shadow: 0 0px 0 0 #000 !important;
+}
+
+.input-field input[type="text"]:focus + label {
+  color: #6200ee !important;
+}
+
+.servings-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-wrapper input.select-dropdown {
+  padding-left: 10px !important;
+  border-bottom: 0px !important;
+}
+
+.select-wrapper + label {
+  top: -35px !important;
+  font-size: 1rem !important;
+}
+
+@media all and (min-width: 600px) {
+  .details-food-modal {
+    width: 40% !important;
+  }
+}

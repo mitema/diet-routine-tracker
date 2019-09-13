@@ -1,0 +1,21 @@
+import React from "react";
+import SelectModal from "../selectModal/SelectModal";
+
+const AddFoodBtn = () => {
+  const handleOnClick = () => {
+    console.log("in handle onclick");
+    return <SelectModal />;
+  };
+  return (
+    <div className="fixed-action-btn">
+      <a
+        href="#"
+        className="btn-floating btn-large blue darken-2"
+        onClick={handleOnClick}
+      >
+        <i className="large material-icons">add</i>
+      </a>
+    </div>
+  );
+};
+export default AddFoodBtn;

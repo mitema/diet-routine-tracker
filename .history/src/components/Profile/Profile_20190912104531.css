@@ -1,0 +1,59 @@
+.profile-container {
+  background-color: #f5f5f5;
+}
+.profile-section-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-section-lg {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-section-lg-content {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-section-container {
+  width: 95%;
+  margin: auto;
+}
+@media all and (min-width: 0px) {
+  .profile-section-lg {
+    display: none;
+  }
+  .profile-section-sm {
+    display: flex;
+  }
+  .diet-info-container {
+    display: none;
+  }
+}
+/* Large screens */
+@media all and (min-width: 600px) {
+  .profile-section-sm {
+    display: none;
+  }
+  .profile-section-lg {
+    display: flex;
+  }
+  .diet-info-container {
+    display: block;
+  }
+  .header-content {
+    height: 20%;
+  }
+  .profile-container {
+    height: 80%;
+  }
+  .profile-picture-container * > {
+    flex: 1 100%;
+  }
+}

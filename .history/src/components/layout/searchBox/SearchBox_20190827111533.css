@@ -1,0 +1,16 @@
+.search-bar {
+  background-color: white;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.header-content > * {
+  flex: 1 50%;
+}
+
+.arrow-forward-icon {
+  flex: 1;
+}

@@ -1,0 +1,9 @@
+.nutrient-info-food-list-container {
+  border: none !important;
+}
+
+@media all and (min-width: 600px) {
+  .diet-details-container {
+    display: none;
+  }
+}

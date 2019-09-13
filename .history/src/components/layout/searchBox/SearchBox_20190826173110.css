@@ -1,0 +1,18 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.search-icon {
+  color: black;
+}
+.search-content {
+  max-height: 500px;
+}
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
