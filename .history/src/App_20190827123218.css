@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+/** {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}*/
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+.App {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.wrapper > * {
+  flex: 1 100%;
+}
+
+/* Medium screens */
+@media all and (min-width: 0px) {
+  /* We tell both sidebars to share a row */
+  .profile-container {
+    flex: 1;
+  }
+  .food-list-container {
+    flex: 100% 0px;
+  }
+  .profile-container {
+    order: 1;
+  }
+  .header-content {
+    order: 2;
+  }
+  .food-list-container {
+    order: 3;
+  }
+}
+
+/* Large screens */
+@media all and (min-width: 600px) {
+  .food-list-container {
+    flex: 3 0px;
+  }
+  .profile-container {
+    order: 1;
+  }
+  .food-list-container {
+    order: 2;
+  }
+  .period-top-container {
+    display: flex;
+  }
+}
+
+/*.page-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+}
+
+.profile-container {
+  background-color: lightgray;
+  max-height: 572px;
+}
+.food-list-container {
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+}*/

@@ -1,0 +1,17 @@
+@media all and (min-width: 0px) {
+  .profile-section-lg {
+    display: none;
+  }
+  .profile-section-sm {
+    display: flex;
+  }
+}
+/* Large screens */
+@media all and (min-width: 600px) {
+  .profile-section-sm {
+    display: none;
+  }
+  .profile-section-lg {
+    display: flex;
+  }
+}

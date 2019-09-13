@@ -1,0 +1,30 @@
+.search-bar {
+  background-color: white;
+}
+
+.search-icon {
+  color: black;
+}
+.input-field {
+  background-color: "red";
+}
+
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.header-content > * {
+  flex: 1 50%;
+}
+
+.arrow-forward-icon {
+  flex: 1;
+}

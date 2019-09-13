@@ -1,0 +1,17 @@
+.search-bar {
+}
+
+.search-icon {
+  color: black;
+}
+
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.arrow-forward-icon {
+  flex: 1;
+}

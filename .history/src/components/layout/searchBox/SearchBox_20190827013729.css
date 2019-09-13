@@ -1,0 +1,29 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  color: black;
+}
+.search-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.input-box {
+  margin: auto;
+  display: flex;
+}
+
+.arrow-forward-icon {
+  flex: 1;
+}

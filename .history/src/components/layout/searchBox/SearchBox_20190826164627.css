@@ -1,0 +1,8 @@
+.search-bar {
+  display:flex
+  max-height: 48px;
+}
+
+.search-icon {
+  color: black;
+}

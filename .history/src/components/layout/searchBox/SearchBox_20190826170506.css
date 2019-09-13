@@ -1,0 +1,13 @@
+.search-bar {
+  justify-content: center;
+  align-content: center;
+}
+
+.search-icon {
+  color: black;
+}
+.navigator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

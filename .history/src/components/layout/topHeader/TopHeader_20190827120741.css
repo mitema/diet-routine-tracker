@@ -1,0 +1,10 @@
+.header-content {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content > * {
+  flex: 1 100%;
+}

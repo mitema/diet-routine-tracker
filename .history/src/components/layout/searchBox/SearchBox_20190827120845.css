@@ -1,0 +1,11 @@
+.search-bar {
+  background-color: white;
+}
+
+.search-container {
+  flex: 1;
+}
+
+.search-container {
+  order: 1;
+}

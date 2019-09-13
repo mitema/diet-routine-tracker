@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+/*.container {
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}*/
+
+body {
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.page-container {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  width: inherit;
+}
+
+.profile-container {
+  background-color: lightgray;
+}
+.food-list-container {
+  background-color: white;
+}

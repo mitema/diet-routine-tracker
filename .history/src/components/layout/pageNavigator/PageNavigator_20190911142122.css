@@ -1,0 +1,20 @@
+.period-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.period-top-container {
+  width: 60%;
+  margin: auto;
+  color: white;
+  font-size: 5rem;
+}
+.period-body-container {
+  width: 100%;
+}
+.period-title {
+  margin: auto;
+}
+.period-container {
+  order: 2;
+}

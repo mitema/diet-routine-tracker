@@ -1,0 +1,14 @@
+.profile-container {
+  background-color: #6200ee;
+}
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.profile-section-container {
+  width: 95%;
+  margin: auto;
+}
