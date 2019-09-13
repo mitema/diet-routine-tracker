@@ -1,4 +1,0 @@
-export const SEARCH_FOOD = "SEARCH_FOOD";
-export const SET_LOADING = "SET_LOADING";
-export const ADD_BTN_CLICKED = "ADD_BTN_CLICKED";
-export const SHOW_FOOD_DETAILS = "SHOW_FOOD_DETAILS";

@@ -1,34 +1,26 @@
-import React, { useEffect } from "react";
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css/dist/js/materialize.min.js";
-import "./App.css";
-import TopHeader from "./components/layout/topHeader/TopHeader";
-import FoodState from "./context/food/FoodState";
-import AddFoodBtn from "./components/layout/AddFoodBtn";
-import NutrientInfo from "./components/nutientInfo/NutrientInfo";
-import Profile from "./components/profile/Profile";
-import PageNavigator from "./components/layout/pageNavigator/PageNavigator";
-import SelectModal from "./components/selectModal/SelectModal";
-import DetailsModal from "./components/detailsModal/DetailsModal";
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-const App = () => {
-  useEffect(() => {
-    M.AutoInit();
-  });
-
+function App() {
   return (
     <div className="App">
-      <FoodState>
-        <TopHeader />
-        <AddFoodBtn />
-        <SelectModal />
-        <DetailsModal />
-        <NutrientInfo />
-        <Profile className="profile-container" />
-        <PageNavigator className="period-body-container" />
-      </FoodState>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
