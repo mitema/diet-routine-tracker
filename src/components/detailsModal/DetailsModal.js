@@ -28,7 +28,6 @@ const DetailsModal = () => {
   useEffect(() => {
     if (foodItemClicked) {
       if (nutrientInfo) {
-        console.log(nutrientInfo);
         setServingsQty(nutrientInfo[0].serving_qty * Number(servingsSize));
         setIcon(nutrientInfo[0].photo.thumb);
         setFoodName(nutrientInfo[0].food_name);
