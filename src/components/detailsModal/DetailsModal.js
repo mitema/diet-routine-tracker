@@ -28,19 +28,19 @@ const DetailsModal = () => {
   useEffect(() => {
     if (foodItemClicked) {
       if (nutrientInfo) {
+        console.log(nutrientInfo);
         setServingsQty(nutrientInfo[0].serving_qty * Number(servingsSize));
         setIcon(nutrientInfo[0].photo.thumb);
         setFoodName(nutrientInfo[0].food_name);
         setBrandName(nutrientInfo[0].brand_name);
         setServingUnit(nutrientInfo[0].serving_unit.split("(")[0]);
         setFoodGrams(
-          Math.round(
-            nutrientInfo[0].serving_weight_grams * Number(servingsSize)
-          )
+          Math.round(nutrientInfo[0].serving_weight_grams) *
+            Number(servingsSize)
         );
 
         setFoodCalories(
-          Math.round(nutrientInfo[0].nf_calories * Number(servingsSize))
+          Math.round(nutrientInfo[0].nf_calories) * Number(servingsSize)
         );
       }
     }
@@ -87,7 +87,7 @@ const DetailsModal = () => {
       <div id="details-modal" className="modal details-food-modal">
         <div className="collection modal-content ">
           <ul>
-            <li className="collection-item details-item">
+            <li className="collection-item details-item details-list">
               <div className="icon-and-text-container">
                 <div className="icon-and-text-container-content">
                   <div className="icon-and-text-container-content-box">
@@ -110,7 +110,7 @@ const DetailsModal = () => {
                 </div>
               </div>
             </li>
-            <li className="collection-item">
+            <li className="collection-item details-list">
               <div className="collection-item-content">
                 <div className="row servings-container">
                   <div className="details-input-container">
@@ -163,7 +163,7 @@ const DetailsModal = () => {
                 <div className="servings-unit-text">{servingUnit}</div>
               </div>
             </li>
-            <li>
+            <li className="details-list">
               <div className="details-add-item-container">
                 <div className="details-day-text">ADD TO TODAY</div>
                 <div className="input-field col s12 details-meal-input">

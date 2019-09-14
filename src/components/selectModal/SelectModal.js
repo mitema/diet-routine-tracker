@@ -5,14 +5,14 @@ import "./SelectModal.css";
 
 const SelectModal = () => {
   const [clickedItemId, setItemClicked] = useState(null);
-  const [itemClassNames, setItemClassNames] = useState(null);
+  const [brandId, setBrandId] = useState(null);
   const foodContext = useContext(FoodContext);
   const itemType = { common: "common", branded: "branded" };
   const { foods } = foodContext;
 
-  const handleOnClick = e => {
-    setItemClicked(e.target.id);
-    setItemClassNames(e.target.className);
+  const handleOnClick = (brandId, foodName) => {
+    setItemClicked(foodName);
+    setBrandId(brandId);
   };
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const SelectModal = () => {
       // Split the string to get the foodId and type of food
 
       const targetItems = clickedItemId;
-      const brandId = itemClassNames.split(" ")[0];
+      //const brandId = itemClassNames.split(" ")[0];
       const targetItemType =
         Number(brandId.toString()) === 0 ? itemType.common : itemType.branded;
       const targetItemId = targetItems;
@@ -46,44 +46,27 @@ const SelectModal = () => {
           if (index <= 4) {
             return (
               <li
-                id={[item.food_name]}
-                className={`${brandId} collection-item avatar select-collection-item`}
-                onClick={handleOnClick}
+                onClick={e => handleOnClick(brandId, item.food_name)}
+                className="collection-item avatar select-collection-item"
                 key={item.food_name}
               >
                 <a
                   href="#details-modal"
-                  className={`${brandId} modal-trigger details-modal-trigger-link`}
-                  id={[item.food_name]}
+                  className="modal-trigger details-modal-trigger-link"
                 >
-                  <div
-                    id={[item.food_name]}
-                    className={`${brandId} select-item-content-container`}
-                  >
-                    <i
-                      id={[item.food_name]}
-                      className={`${brandId} material-icons circle icon-circle select-food-icon`}
-                    >
+                  <div className="select-item-content-container">
+                    <i className="material-icons circle icon-circle select-food-icon">
                       <img
                         src={item.photo.thumb}
                         alt="food-icon"
-                        id={[item.food_name]}
-                        className={`${brandId} select-food-img`}
+                        className="select-food-img"
                       />
                     </i>
 
                     <div>
-                      <span
-                        id={[item.food_name]}
-                        className={`${brandId} title select-food-title`}
-                      >
+                      <span className="title select-food-title">
                         {item.food_name}
-                        <div
-                          id={[item.food_name]}
-                          className={`${brandId} item-brand-name`}
-                        >
-                          {item.brand_name}
-                        </div>
+                        <div className="item-brand-name">{item.brand_name}</div>
                       </span>
                     </div>
                   </div>

@@ -12,6 +12,7 @@
 .details-item-brand-name {
   color: gray;
 }
+
 .collection-item .details-item {
   margin-left: 20px !important;
   padding-left: 0px !important;
@@ -52,6 +53,10 @@
 .details-modal-close-icon {
   border-radius: 5px !important;
   color: #6200ee;
+}
+.details-list {
+  margin-left: 2rem !important;
+  padding-left: 0rem !important;
 }
 
 .details-input-container {
@@ -118,7 +123,6 @@
   height: 20% !important;
 }
 .details-add-item-container {
-  margin-left: 20px !important;
   margin-right: 20px !important;
 }
 
@@ -129,7 +133,6 @@
 
 .details-text-container {
   display: flex !important;
-  margin-right: 1rem !important;
 }
 .operations-icon {
   display: flex;

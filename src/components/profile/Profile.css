@@ -67,9 +67,9 @@
   .peroid-body-container {
     height: 10%;
   }
-  .nutrient-info-food-list-container {
+  /*.nutrient-info-food-list-container {
     height: 60%;
-  }
+  }*/
 }
 /* Large screens */
 @media all and (min-width: 600px) {
